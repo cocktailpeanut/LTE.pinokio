@@ -2,7 +2,13 @@ const os = require('os')
 const fs = require('fs')
 const path = require("path")
 const exists = async p => !!(await fs.promises.stat(p).catch(e => false));
-const config = require('./config.json')
+const config = {
+  "title": "LoRA the Explorer",
+  "description": "Stable Diffusion LoRA Playground",
+  "emoji": "🔎 🖼️",
+  "colorFrom": "indigo",
+  "colorTo": "blue"
+}
 module.exports = {
   title: config.title,
   description: config.description,
