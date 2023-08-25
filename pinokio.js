@@ -4,7 +4,7 @@ const path = require("path")
 const exists = async p => !!(await fs.promises.stat(p).catch(e => false));
 const config = {
   "title": "LoRA the Explorer",
-  "description": "Stable Diffusion LoRA Playground",
+  "description": "Stable Diffusion LoRA Playground (HuggingFace: https://huggingface.co/spaces/multimodalart/LoraTheExplorer)",
   "emoji": "🔎 🖼️",
   "colorFrom": "indigo",
   "colorTo": "blue"
