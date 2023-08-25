@@ -11,9 +11,9 @@ module.exports = {
   colorTo: config.colorTo,
   icon: "icon.png",
   menu: async (kernel) => {
-    let installed = await exists(path.resolve(__dirname, "env"))
+    let installed = await exists(path.resolve(__dirname, "LoraTheExplorer", "env"))
     if (installed) {
-      let session = (await kernel.loader.load(path.resolve(__dirname, "session.json"))).resolved
+      let session = (await kernel.loader.load(path.resolve(__dirname, "LoraTheExplorer", "session.json"))).resolved
       return [{
         when: "start.json",
         on: `<i class='fa-solid fa-spin fa-circle-notch'></i> Running`,
