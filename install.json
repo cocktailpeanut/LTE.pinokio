@@ -79,7 +79,7 @@
     {
       "method": "shell.enter",
       "params": {
-        "message": "pip install -r {{os.platform() === 'win32' ? 'LoraTheExplorer\\\\requirements.txt' : 'LoraTheExplorer/requirements.txt'}}",
+        "message": "pip install -r requirements.txt",
         "on": [
           {
             "event": null,
