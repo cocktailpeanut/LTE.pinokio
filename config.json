@@ -1,5 +1,6 @@
 {
-  "title": "LoRA",
+  "title": "LoRA the Explorer",
+  "description": "Stable Diffusion LoRA Playground",
   "emoji": "🔎 🖼️",
   "colorFrom": "indigo",
   "colorTo": "blue"

@@ -5,6 +5,7 @@ const exists = async p => !!(await fs.promises.stat(p).catch(e => false));
 const config = require('./config.json')
 module.exports = {
   title: config.title,
+  description: config.description,
   emoji: config.emoji,
   colorFrom: config.colorFrom,
   colorTo: config.colorTo,
