@@ -1,0 +1,105 @@
+{
+  "run": [
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "git clone https://huggingface.co/spaces/cocktailpeanut/LoraTheExplorer",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv env",
+        "path": "LoraTheExplorer"
+      }
+    },
+    {
+      "method": "shell.start",
+      "params": {
+        "path": "LoraTheExplorer",
+        "env": {
+          "HF_HOME": "./huggingface"
+        }
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "{{os.platform() === 'win32' ? 'env\\\\Scripts\\\\activate env' : 'source env/bin/activate env'}}",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "npx --yes torchcraft",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "pip install -r torchcraft.txt",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "pip install gradio huggingface_hub",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "shell.enter",
+      "params": {
+        "message": "pip install -r {{os.platform() === 'win32' ? 'LoraTheExplorer\\\\requirements.txt' : 'LoraTheExplorer/requirements.txt'}}",
+        "on": [
+          {
+            "event": null,
+            "return": true
+          }
+        ]
+      }
+    },
+    {
+      "method": "input",
+      "params": {
+        "title": "Install Success",
+        "description": "Go back to the dashboard and launch the app!"
+      }
+    },
+    {
+      "method": "browser.open",
+      "params": {
+        "uri": "/?selected=LoRA the Explorer"
+      }
+    }
+  ]
+}
